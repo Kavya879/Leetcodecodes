@@ -22,3 +22,32 @@ Memory
 Details
 10.41MB
 Beats 54.99%of users with C++
+
+
+- BETTER
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n=nums.size();
+        int j;
+        for(int i=0 ; i<n ; i++){
+            int x=(target-nums[i]); // 2 3 5
+            j=i+1 ;
+            while(j<n){if(nums[j]==x && j<n){
+                return {i,j};
+            } else {
+                j++;
+            }
+            }
+        }return {-1,1};
+    } 
+};
+
+Runtime
+Details
+134ms
+Beats 48.80%of users with C++
+Memory
+Details
+10.50MB
+Beats 51.91%of users with C++
