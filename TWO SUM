@@ -1,0 +1,24 @@
+TWO SUM 
+- USING BRUTE FORCE
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n=nums.size();
+        for(int i=0 ; i<n ; i++){ // 1 2 3 4 5
+            for(int j=i+1 ; j<n ; j++){
+               if ((nums[i]+nums[j]==target)){
+                   return {i,j};
+               } 
+            }
+        }
+    return {-1,1};
+}
+};  Runtime
+Details
+267ms
+Beats 38.70%of users with C++
+Memory
+Details
+10.41MB
+Beats 54.99%of users with C++
